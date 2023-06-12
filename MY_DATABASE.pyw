@@ -1,0 +1,15 @@
+import sqlite3
+con=sqlite3.Connection('MY_DATABASE')
+cur=con.cursor()
+#cur.execute('create table Bus(B_id number primary key,B_type varchar(20),Capacity number,Fare number,OP_ID number,R_ID number,foreign key(OP_ID) references Operator(Operator_id),foreign key(R_ID) references Route(Route_id))')
+#cur.execute('create table Operator(Operator_id number primary key,O_name varchar(20),Address varchar(20),O_Pno number,Email varchar(20))')
+#cur.execute('create table Route(Route_id number,Sname varchar(20),S_id number,primary key(Route_id,S_id))')
+#cur.execute('create table Runs(Bus_id number,Run_date date,Seat number,foreign key(Bus_id) references Bus(B_id))')
+#cur.execute('create table Bookhistory(Ref_no int auto_increment,C_Phone int primary key,C_name varchar(20),Gender varchar(10),Total_seat int,Book_date date,Id_Bus int,Boarding varchar(20),Destination varchar(20),foreign key(Id_Bus) references Bus(B_id))')
+#cur.execute('insert into Bus(B_id,B_type,Capacity,Fare,OP_ID,R_ID) values (1,"AC 2x2",30,1000,1,1),(2,"AC 3x2",50,800,1,2),(3,"Non AC 2x2",3,600,1,3),(4,"Non AC 2x2",30,600,1,4)')
+#cur.execute('insert into Operator(Operator_id,O_name,Address,O_Pno,Email) values (1,"Kamla","AB Road,Guna",1234567890,"Kamlabus@gmail.com")')
+#cur.execute('insert into Route(Route_id,Sname,S_id) values (1,"Guna",1),(1,"JP College",2),(1,"Binagunj",3),(1,"Biora",4),(1,"Bhopal",5),(2,"Bhopal",1),(2,"Biora",2),(2,"Binagunj",3),(2,"JP College",4),(2,"Guna",5),(3,"Delhi",1),(3,"Agra",2),(3,"Jhansi",3),(3,"Shivpuri",4),(4,"Shivpuri",1),(4,"Jhansi",2),(4,"Agra",3),(4,"Delhi",4)')
+#cur.execute('insert into Runs(Bus_id,Run_date,Seat) values (1,"2022-11-01",30),(1,"2022-11-02",30),(2,"2022-11-03",50),(2,"2022-11-04",50),(3,"2022-11-05",3),(3,"2022-11-06",3),(4,"2022-11-07",30),(4,"2022-11-08",30)')
+#cur.execute('DELETE from Bookhistory where C_Phone=1234567890')
+
+con.commit()
